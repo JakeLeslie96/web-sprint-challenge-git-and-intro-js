@@ -219,7 +219,7 @@ console.log('task 1b',artists[3].bio )
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 (not auto tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
-artists[8].name = 'Vincent van Gogh'
+// artists[8].name = 'Vincent van Gogh'
 console.log('task 2: ',artists[8].name)
 
 
@@ -270,7 +270,7 @@ function removeArtist(arr, num) {
   rmArray.splice(num, 1);
   return rmArray;
 }
-console.log('task 5',removeArtist(artists, 0));
+console.log('task 5',removeArtist(artists, 19));
 
 
 
@@ -290,9 +290,19 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array, string2, string3, string4, string5, string6) {
+  const aaArray = [...artists];
+  const newArtist = {
+    name: string2,
+    years: string3,
+    genre: string4,
+    nationality: string5,
+    bio: string6,
+  }
+aaArray.push(newArtist)
+return aaArray
 }
+console.log('task 6', addArtist(artists, 'Jake', 23, 'Full stack web dev', 'American', 'working as a bank teller, looking to make more money and follow my passions in tech!'))
 
 
 
